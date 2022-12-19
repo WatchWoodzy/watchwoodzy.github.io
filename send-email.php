@@ -10,7 +10,7 @@ $message = $_POST['message'];
 $body = "From: $name\n E-Mail: $email\n Message:\n $message";
 
 if (mail($to, $subject, $body)) {
-  echo 'Your message has been sent!';
+  echo json_encode(array('success' => true));
 } else {
-  echo 'There was an error sending your message.';
+  echo json_encode(array('success' => false, 'error' => 'Error sending email'));
 }
