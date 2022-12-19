@@ -5,7 +5,7 @@ document.querySelector('form').addEventListener('submit', e => {
     const formData = new FormData(e.target);
   
     // Send the form data to the server
-    fetch('./send-email.php', {
+    fetch('/send-email.php', {
       method: 'POST',
       body: formData
     })
