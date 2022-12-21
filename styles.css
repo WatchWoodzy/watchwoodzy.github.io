@@ -57,6 +57,10 @@ i:hover {
     margin: 0 auto;
 }
 
+button {
+    cursor: pointer;
+}
+
 
 /* NAV BAR */
 
@@ -367,3 +371,140 @@ nav {
 /* CONTACT */
 
 
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__title {
+    color: #242424;
+    border: #242424 solid 2px;
+    border-radius: 80px;
+    padding: 8px 0;
+}
+
+.pointing {
+    display: inline-block;
+    animation: animate-point 2s infinite ease-in-out;
+}
+
+@keyframes animate-point {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(6px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    75% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.contact__form {
+    margin: 60px 0;
+    text-align: center;
+    color: #242424;
+}
+
+.contact__button {
+    color: white;
+    background-color: #242424;
+    padding: 12px 24px;
+    font-size: 24px;
+    border-radius: 40px;
+    border: none;
+}
+
+.contact__input {
+    padding: 28px 0;
+}
+
+.contact__text {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 8px;
+}
+
+.contact__box {
+    font-size: 20px;
+    padding: 0 8px;
+    background-color: #242424;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 400px;
+    height: 28px;
+}
+
+.contact__message {
+    font-size: 20px;
+    width: 700px;
+    height: 160px;
+    padding: 8px;
+    background-color: #242424;
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+
+
+/* FOOTER */
+
+
+footer {
+    background-color: #242424;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0;
+}
+
+.footer__social--list {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 28px;
+}
+
+.footer__logo--image {
+    width: 70px;
+    height: 70px;
+}
+
+.footer__social--link,
+.footer__logo--popper,
+.footer__copyright {
+    color: white;
+}
+
+.footer__logo--popper {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 400ms ease;
+}
+
+.footer__anchor {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer__anchor:hover .footer__logo--popper {
+    transform: translateX(60px);
+    opacity: 1;
+}
